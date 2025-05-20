@@ -30,7 +30,7 @@ Construido con ❤️ en PHP y HTML como en los viejos tiempos.
 
 Abre en el navegador: http://localhost:8000
 
-### Estructura
+#### 💾 Estructura
 ```
   demo
     ├── auth.js
@@ -50,5 +50,5 @@ Abre en el navegador: http://localhost:8000
     └── sql
          └──schema.sql
 ```
-### Contribuciones
+#### 💬 Contribuciones
 ¿Ideas, errores o mejoras? ¡Son bienvenidas! Abrí un issue o un pull request.

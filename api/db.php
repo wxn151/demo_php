@@ -1,7 +1,7 @@
 <?php
-$dsn = 'mysql:host=localhost;dbname=dummy_php'; // DSN de la base de datos
-$usuario = 'root';
-$contrasena = 'Donut.238';
+$dsn = 'mysql:host=localhost;dbname=your_db'; // DSN de la base de datos
+$usuario = 'your_user';
+$contrasena = 'your_pass';
 
 try {
     // Establecer la conexión

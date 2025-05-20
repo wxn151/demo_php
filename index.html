@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="form-container">
+    <form id="loginForm">
+  <h2>Inicio de sesión</h2>
+  <br/>
+
+  <input 
+    type="email" 
+    id="email" 
+    placeholder="Email" 
+    required 
+    title="Introduce un correo electrónico válido"
+  >
+
+  <div class="password-container">
+    <input 
+      type="password" 
+      id="password" 
+      placeholder="Password" 
+      required 
+      minlength="8" 
+      title="La contraseña debe tener al menos 8 caracteres"
+    >
+    <span class="material-icons password_invisible" data-togglebutton="password" style="cursor:pointer;">
+      visibility
+    </span>
+    <span class="material-icons password_visible" data-togglebutton="password" style="display:none; cursor:pointer;">
+      visibility_off
+    </span>
+  </div>
+
+  <br/>
+  <button type="submit">Acceder</button>
+  <p class="register-hint">¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p>
+</form>
+
+  </div>
+  <script src="auth.js"></script>
+</body>
+</html>

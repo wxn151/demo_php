@@ -1,0 +1,216 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+  width: 320px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.4rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Línea sutil debajo */
+}
+
+input{
+  display: block;
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: #222;
+  color: white;
+}
+
+input:focus {
+  outline: 2px solid #66ccff;
+}
+
+button {
+  background-color: transparent;
+  color: #fff; /* Puedes usar blanco si quieres */
+  padding: 0.7rem;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  border: none;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(to right, #f00c5898, #3a37d8);
+  z-index: -1;
+  border-radius: 8px;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  padding: 2px;
+}
+
+button:hover {
+  color: #aaaaaa;
+}
+
+
+a {
+  color: #66ccff;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.user-email {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.switch {
+  position: fixed;
+  right: 33px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  width: 42px;
+  height: 22px;
+  background-color: #ccc;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+input:checked + .slider {
+  background-color: #999;
+}
+
+input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.status-label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+}
+
+.logout {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Hidde - show password */
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container input[type="password"],
+.password-container input[type="text"] {
+  padding-right: 40px; /* espacio para el ícono */
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.password-container .material-icons {
+  position: absolute;
+  right: 10px;
+  top: 38%;
+  transform: translateY(-50%); /* centrado exacto vertical */
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.register-hint {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 1.5rem;
+}
+
+.register-hint a {
+  color: #ff3366;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.register-hint a:hover {
+  color: #e0205d;
+  text-decoration: underline;
+}
